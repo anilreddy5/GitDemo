@@ -29,7 +29,7 @@ class TestOne(BaseClass):
             # name = cart.find_element_by_xpath("//div//h4//a")[i].text
             name = cart.text
             log.info(name)
-            # print(name)
+            print(name)
             if name == "Blackberry":
                 # cart.find_elements_by_xpath("div//button").click()
                 Checkoutpage.getCardFooter()[i].click()
@@ -39,7 +39,7 @@ class TestOne(BaseClass):
         items = Checkoutpage.getItems()
         for item in items:
             cartList.append(item.text)
-        # print(cartList)
+        print(cartList)
         log.info(cartList)
 
         assert nameList == cartList
@@ -62,7 +62,7 @@ class TestOne(BaseClass):
         Confirmpage.purchaseClick().click()
         # successMessage = self.driver.find_element_by_class_name("alert-success").text
         successMessage = Confirmpage.successMessage().text
-        # print(successMessage)
+        print(successMessage)
         log.info("Success message will be " + successMessage)
         assert "Success!" in successMessage
 
