@@ -1,0 +1,1 @@
+# if we define anything under the class we should have self parameter

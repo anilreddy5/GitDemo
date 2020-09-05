@@ -1,0 +1,29 @@
+# any pytest file should start wiyj test_ or end with _test
+# pytest method names should start with test
+# any code should be in wrapped only
+# to print all the test at the sametime in the command window use py.test
+# if you want to see more information on executing the test use py.test -v
+# if you want to see the output use py.test -v -s
+
+# we cannot pass same names for two test cases in the same file
+# if you want execute only one test case file, define the file name in the command, use py.test test_demo1.py -v -s
+# if you want to run the test case from different files, make sure to create the test cases with common name in it then call it with that regular expression,
+use py.test -k creditcard -v -s
+
+# Method info should have some sense
+# -k stands for method names execution, -s logs in output, -v stands for more info metadata
+# you can run specific file with py.test <filename>
+
+# you can mark (tag) tests with @pytest.mark.smoke and then run with -m
+
+# you can skip tests with @pytest.mark.skip
+
+# if you don't want a report to run the use @pytest.mark.xfail
+
+#fistures are used as setup and tear down methods fro test cases- conftest file to generalize fixture and make it available to all test cases
+
+# Datadriven and parameterisation can be done with return statements in tuple format
+
+# when you define fixture scope to class only, it will run once before class is initiated at the end
+
+# to generate html report use py.test --html=report.html -v -s

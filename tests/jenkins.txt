@@ -1,0 +1,19 @@
+jenkins integration
+ to run jenkins on your PC give the command as java -jar jenkins.war -httpPort=9090
+ for instance we can give any port number, if something running on the 9090 you can give another port number to run like 1010
+password: 377fe9f545c4409c898e033d620176b8
+
+Execute Shell Windows Command
+cd tests
+py.test --browser_name chrome --html=$WORKSPACE/reports/report.html
+
+To control the parameterised browser
+cd tests
+py.test --browser_name "$browserName" --html=$WORKSPACE/reports/report.html
+
+junit xml report
+cd tests
+py.test --browser_name chrome --html=$WORKSPACE/reports/report.html -v --junitxml="result.xml"
+
+post build action
+tests/*.xml
