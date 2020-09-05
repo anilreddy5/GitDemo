@@ -67,3 +67,9 @@ class TestOne(BaseClass):
         assert "Success!" in successMessage
 
         self.driver.get_screenshot_as_file("photo.png")
+
+    def test_e2e2(self):
+        log = self.getLogger()
+        nameList = ['Blackberry']
+        cartList = []
+        homePage = HomePage(self.driver)
