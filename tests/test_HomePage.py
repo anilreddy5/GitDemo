@@ -50,6 +50,7 @@ class TestHomePage(BaseClass):
         message = Submissionpage.getMessage().text
         print(message)
         self.driver.get_screenshot_as_file("photo1.png")
+        print("Anil")
         assert "success" in message
         self.driver.refresh()
     # with tuples under list
