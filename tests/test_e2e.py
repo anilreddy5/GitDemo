@@ -73,3 +73,9 @@ class TestOne(BaseClass):
         nameList = ['Blackberry']
         cartList = []
         homePage = HomePage(self.driver)
+
+    def test_e2e3(self):
+        log = self.getLogger()
+        nameList = ['Blackberry']
+        cartList = []
+        homePage = HomePage(self.driver)
